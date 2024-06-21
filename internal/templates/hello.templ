@@ -1,0 +1,15 @@
+package components
+
+templ Hello() {
+	@Base() {
+		<form hx-post="/" method="POST" hx-target="#hello-container" class="flex flex-col">
+			<input class="border" id="name" name="name" type="text"/>
+			<button type="submit">Submit</button>
+		</form>
+		<div id="hello-container"></div>
+	}
+}
+
+templ HelloPost(name string) {
+	<div class="bg-slate-600">Hello, { name }</div>
+}
